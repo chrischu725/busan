@@ -6,7 +6,220 @@
 <link rel="stylesheet" href="style.css"></head>
 <body>
 <header><h1>2026 韓國釜山</h1><p>10/26 ~ 10/30 ｜ 5天4夜 ｜ 2人同行</p><svg id="hv" viewBox="0 0 400 96" preserveAspectRatio="xMidYMax slice"></svg></header>
-<div class="chips" id="chips"></div>
-<main id="main"></main>
-<nav id="nav"></nav>
+
+<div class="chips" id="chips">
+<button class="chip" data-d="0"><b>1</b>10/26</button>
+<button class="chip" data-d="1"><b>2</b>10/27</button>
+<button class="chip" data-d="2"><b>3</b>10/28</button>
+<button class="chip" data-d="3"><b>4</b>10/29</button>
+<button class="chip" data-d="4"><b>5</b>10/30</button>
+</div>
+
+<main id="main">
+
+<!-- 總覽 -->
+<section class="tab" id="t-ov" hidden>
+
+<div class="sec">✈️ 航班</div>
+<div class="card"><h3>去程 10/26（一）真航空 LJ578</h3><div class="fl"><b>02:40</b><span>2h30m ✈</span><b>06:10</b></div><p>TPE 桃園 T1 → PUS 釜山金海</p><hr style="border:0;border-top:1px solid var(--line)"><h3>回程 10/30（五）真航空 LJ577</h3><div class="fl"><b>21:50</b><span>2h50m ✈</span><b>23:40</b></div><p>PUS 釜山金海 → TPE 桃園 T1</p></div>
+<div class="sec">🏨 住宿一覽</div>
+<div class="card">
+<div class="li"><span>10/26–10/29（3 晚）<small>Gunam-ro 21beon-gil 6 · 入住 16:00 · 退房 11:00</small></span><b>Elmomento 海雲台</b></div>
+<div class="li"><span>10/29–10/30（1 晚）<small>16:00 後入住 · 11:00 前退房</small></span><b>廣安里（待補）</b></div></div>
+<div class="sec">🗺 旅行路線</div>
+<div class="card">
+<div class="li"><span>Day1 · 10/26</span><b>西面 → 海雲台</b></div>
+<div class="li"><span>Day2 · 10/27</span><b>機張區</b></div>
+<div class="li"><span>Day3 · 10/28</span><b>影島 → 南浦</b></div>
+<div class="li"><span>Day4 · 10/29</span><b>新世界 → 廣安里</b></div>
+<div class="li"><span>Day5 · 10/30</span><b>醫美 → 回程</b></div></div>
+<div class="tip">🎫 釜山 Pass 實體票卡 48 小時 × 2（Klook JMP851357）。訂單上的 2027/8/27 是使用期限；首次入場時開始計時，建議 10/27 13:30 在 Skyline Luge 開卡，10/29 13:30 前入場 Spa Land。</div>
+</section>
+
+<!-- 準備 -->
+<section class="tab" id="t-pp" hidden>
+
+<details><summary>🛡 保險</summary><div class="kr"><span>旅平險加旅遊不便險，並確認醫美是否在保障內。</span></div></details>
+<details><summary>📋 其他</summary><div class="kr"><span>入境：台灣護照至 2026/12/31 免申請 K-ETA。<br>App：Naver Map、KakaoT、Papago、Catchtable。<br>出發前查：樂天西面、新世界 10/26、10/29 公休日。</span></div></details>
+<div class="card"><h3>🧳 行李清單 <span id="pt" style="float:right;font-weight:400;color:var(--sub)"></span></h3><div class="bar"><i id="pg"></i></div></div>
+<details><summary>🪪 證件 & 重要物品</summary>
+<label class="ck"><input type="checkbox"  data-id="pk0_0"><span>護照（效期 6 個月以上）</span></label>
+<label class="ck"><input type="checkbox"  data-id="pk0_1"><span>機票與訂單截圖</span></label>
+<label class="ck"><input type="checkbox"  data-id="pk0_2"><span>釜山 Pass（Klook JMP851357）</span></label>
+<label class="ck"><input type="checkbox"  data-id="pk0_3"><span>Catchtable 訂位截圖</span></label>
+<label class="ck"><input type="checkbox"  data-id="pk0_4"><span>信用卡、韓幣、台幣</span></label></details>
+<details><summary>🔌 3C & 電子</summary>
+<label class="ck"><input type="checkbox"  data-id="pk1_0"><span>eSIM 或 SIM 卡</span></label>
+<label class="ck"><input type="checkbox"  data-id="pk1_1"><span>行動電源</span></label>
+<label class="ck"><input type="checkbox"  data-id="pk1_2"><span>轉接頭（圓兩孔）</span></label>
+<label class="ck"><input type="checkbox"  data-id="pk1_3"><span>充電線、耳機</span></label></details>
+<details><summary>🧥 衣物</summary>
+<label class="ck"><input type="checkbox"  data-id="pk2_0"><span>保暖外套（10–20°C）</span></label>
+<label class="ck"><input type="checkbox"  data-id="pk2_1"><span>好走的鞋</span></label>
+<label class="ck"><input type="checkbox"  data-id="pk2_2"><span>泳衣、毛巾（Spa Land、足浴）</span></label>
+<label class="ck"><input type="checkbox"  data-id="pk2_3"><span>換洗衣物</span></label></details>
+<details><summary>🧴 盥洗 & 個人用品</summary>
+<label class="ck"><input type="checkbox"  data-id="pk3_0"><span>牙刷牙膏</span></label>
+<label class="ck"><input type="checkbox"  data-id="pk3_1"><span>保養品、防曬</span></label>
+<label class="ck"><input type="checkbox"  data-id="pk3_2"><span>口罩</span></label></details>
+<details><summary>💊 藥品 & 急救</summary>
+<label class="ck"><input type="checkbox"  data-id="pk4_0"><span>常備藥</span></label>
+<label class="ck"><input type="checkbox"  data-id="pk4_1"><span>OK 繃</span></label>
+<label class="ck"><input type="checkbox"  data-id="pk4_2"><span>腸胃藥</span></label></details>
+<details><summary>🛍 其他</summary>
+<label class="ck"><input type="checkbox"  data-id="pk5_0"><span>折疊購物袋（裝戰利品）</span></label>
+<label class="ck"><input type="checkbox"  data-id="pk5_1"><span>退稅用的護照影本</span></label></details>
+</section>
+
+<!-- 每日行程 -->
+<section class="tab" id="t-day">
+<div class="day" id="d0" hidden>
+<div class="dh"><div class="bd">1<small>DAY</small></div><div><span class="dt">10/26（週一）· 約 ₩230,000</span><h2>西面 → 海雲台</h2></div></div>
+<div class="sec">🚕 交通</div>
+<div class="card"><table>
+<tr><th>時間</th><th>區間</th><th>備註</th></tr>
+<tr><td>07:45</td><td>計程車到西面</td><td><small>約 40 分鐘 · ₩25,000</small></td></tr>
+<tr><td>14:30</td><td>計程車到海雲台</td><td><small>約 30 分鐘 · ₩18,000</small></td></tr></table></div>
+<div class="tip">💡 出關預留 1.5 小時；百貨 10:30 才開，先吃早餐再寄行李。</div>
+<div class="pills"><a class="pill" href="https://www.google.com/maps/dir/?api=1&destination=Gimhae%20International%20Airport" target="_blank" rel="noopener">📍 抵達金海機場</a><a class="pill" href="https://www.google.com/maps/dir/?api=1&destination=All%20Sunday%20Bagel%20Seomyeon%20Busan" target="_blank" rel="noopener">📍 All Sunday Bagel 早餐</a><a class="pill" href="https://www.google.com/maps/dir/?api=1&destination=Jeonpo%20Cafe%20Street%20Busan" target="_blank" rel="noopener">📍 田浦咖啡街</a><a class="pill" href="https://www.google.com/maps/dir/?api=1&destination=Lotte%20Department%20Store%20Seomyeon" target="_blank" rel="noopener">📍 樂天百貨西面</a><a class="pill" href="https://www.google.com/maps/dir/?api=1&destination=Old%20Mansion%20Seomyeon%20Busan" target="_blank" rel="noopener">📍 老宅邸燒肉</a><a class="pill" href="https://www.google.com/maps/dir/?api=1&destination=Elmomento%20Haeundae%20Busan" target="_blank" rel="noopener">📍 Elmomento 寄放行李</a><a class="pill" href="https://www.google.com/maps/dir/?api=1&destination=Haerimdan-gil%20Busan" target="_blank" rel="noopener">📍 海理團路</a><a class="pill" href="https://www.google.com/maps/dir/?api=1&destination=Haeundae%20Traditional%20Market" target="_blank" rel="noopener">📍 海雲台傳統市場晚餐</a></div>
+<details><summary>🇰🇷 計程車韓文指南</summary><div class="kr"><b>여기로 가 주세요.</b><span>請載我到這裡（出示地圖）</span></div><div class="kr"><b>여기서 세워 주세요.</b><span>請在這裡停車</span></div><div class="kr"><b>카드 결제 되나요?</b><span>可以刷卡嗎？</span></div><div class="kr"><b>영수증 주세요.</b><span>請給我收據</span></div><div class="kr"><b>예약했어요.</b><span>我有訂位</span></div></details>
+<div class="sec">🏛 景點與行程</div>
+<div class="sc"><div class="bn b1"><i data-k="plane"></i></div><div class="sb"><h3>抵達金海機場</h3><p>入境審查、領行李、領網卡，預留 1.5 小時</p><div class="row"><span><span class="ch">⏰ 06:10</span></span><a class="pill" href="https://www.google.com/maps/dir/?api=1&destination=Gimhae%20International%20Airport" target="_blank" rel="noopener">📍 導航</a></div></div></div>
+<div class="sc"><div class="bn b2"><i data-k="coffee"></i></div><div class="sb"><h3>田浦咖啡街</h3><p>Franklin Coffee Roasters 喝奶茶</p><div class="ch2"><span class="ch">🕒 依店家，未查證，出發前看 Naver Map</span></div><div class="row"><span><span class="ch">⏰ 09:45</span></span><a class="pill" href="https://www.google.com/maps/dir/?api=1&destination=Jeonpo%20Cafe%20Street%20Busan" target="_blank" rel="noopener">📍 導航</a></div></div></div>
+<div class="sc"><div class="bn b3"><i data-k="shop"></i></div><div class="sb"><h3>樂天百貨西面</h3><p>B2 寄放行李（前 3 小時免費，之後每小時 ₩1,000）、換韓幣</p><div class="ch2"><span class="ch">🕒 約 10:30–20:00（未查證），公休日請查官網</span></div><div class="row"><span><span class="ch">⏰ 10:30</span></span><a class="pill" href="https://www.google.com/maps/dir/?api=1&destination=Lotte%20Department%20Store%20Seomyeon" target="_blank" rel="noopener">📍 導航</a></div></div></div>
+<div class="sc"><div class="bn b0"><i data-k="sea"></i></div><div class="sb"><h3>Elmomento 寄放行李</h3><p>16:00 才能入住</p><div class="row"><span><span class="ch">⏰ 15:00</span></span><a class="pill" href="https://www.google.com/maps/dir/?api=1&destination=Elmomento%20Haeundae%20Busan" target="_blank" rel="noopener">📍 導航</a></div></div></div>
+<div class="sc"><div class="bn b1"><i data-k="shop"></i></div><div class="sb"><h3>海理團路</h3><p>買 butter sand 伴手禮</p><div class="ch2"><span class="ch">🕒 依店家，未查證，出發前看 Naver Map</span></div><div class="row"><span><span class="ch">⏰ 15:15</span></span><a class="pill" href="https://www.google.com/maps/dir/?api=1&destination=Haerimdan-gil%20Busan" target="_blank" rel="noopener">📍 導航</a></div></div></div>
+<div class="sec">🍽 餐廳與咖啡</div>
+<div class="sc"><div class="bn bf"><i data-k="food"></i></div><div class="sb"><h3>All Sunday Bagel 早餐</h3><p>約 ₩20,000</p><div class="row"><span><span class="ch">⏰ 08:30</span> <span class="ch y">必吃</span></span><a class="pill" href="https://www.google.com/maps/dir/?api=1&destination=All%20Sunday%20Bagel%20Seomyeon%20Busan" target="_blank" rel="noopener">📍 導航</a></div></div></div>
+<div class="sc"><div class="bn bf"><i data-k="food"></i></div><div class="sb"><h3>老宅邸燒肉</h3><p>已訂位 2 人 · 約 ₩80,000</p><div class="row"><span><span class="ch">⏰ 12:30</span> <span class="ch y">必吃</span></span><a class="pill" href="https://www.google.com/maps/dir/?api=1&destination=Old%20Mansion%20Seomyeon%20Busan" target="_blank" rel="noopener">📍 導航</a></div></div></div>
+<div class="sc"><div class="bn bf"><i data-k="food"></i></div><div class="sb"><h3>海雲台傳統市場晚餐</h3><p>約 ₩40,000，再吃 Prahran 法式吐司</p><div class="row"><span><span class="ch">⏰ 18:30</span> <span class="ch y">必吃</span></span><a class="pill" href="https://www.google.com/maps/dir/?api=1&destination=Haeundae%20Traditional%20Market" target="_blank" rel="noopener">📍 導航</a></div></div></div>
+<div class="sec">📝 備忘</div>
+<div class="card">
+<div class="memo"><b>14:00</b><span>逛樂天超市、取行李</span></div></div>
+<div class="tip">ℹ️ 營業時間與票價整理自 Klook、Trazy、Busan 官方與旅遊網站，可能調整，出發前請以官網或 Naver Map 為準。</div>
+</div>
+
+<div class="day" id="d1" hidden>
+<div class="dh"><div class="bd">2<small>DAY</small></div><div><span class="dt">10/27（週二）· 約 ₩290,000</span><h2>機張區</h2></div></div>
+<div class="tip">💡 13:30 Skyline Luge 開 Pass，之後 48 小時內要用完 Arte、松島纜車與 Spa Land。</div>
+<div class="pills"><a class="pill" href="https://www.google.com/maps/dir/?api=1&destination=Egg%20Drop%20Haeundae" target="_blank" rel="noopener">📍 Egg Drop 或豬肉湯飯</a><a class="pill" href="https://www.google.com/maps/dir/?api=1&destination=Haedong%20Yonggungsa" target="_blank" rel="noopener">📍 海東龍宮寺</a><a class="pill" href="https://www.google.com/maps/dir/?api=1&destination=Gijang%20Market%20Busan" target="_blank" rel="noopener">📍 機張市場帝王蟹</a><a class="pill" href="https://www.google.com/maps/dir/?api=1&destination=Skyline%20Luge%20Busan" target="_blank" rel="noopener">📍 Skyline Luge</a><a class="pill" href="https://www.google.com/maps/dir/?api=1&destination=Liberta%20Gijang%20Busan" target="_blank" rel="noopener">📍 Liberta 海景咖啡</a><a class="pill" href="https://www.google.com/maps/dir/?api=1&destination=Cheongsapo%20Blueline%20Park" target="_blank" rel="noopener">📍 青沙浦 海岸列車／膠囊列車</a><a class="pill" href="https://www.google.com/maps/dir/?api=1&destination=Tiger%20Daifuku%20Mipo%20Busan" target="_blank" rel="noopener">📍 老虎冰淇淋大福</a><a class="pill" href="https://www.google.com/maps/dir/?api=1&destination=X%20the%20Sky%20Busan" target="_blank" rel="noopener">📍 X the Sky</a></div>
+<details><summary>🇰🇷 計程車韓文指南</summary><div class="kr"><b>여기로 가 주세요.</b><span>請載我到這裡（出示地圖）</span></div><div class="kr"><b>여기서 세워 주세요.</b><span>請在這裡停車</span></div><div class="kr"><b>카드 결제 되나요?</b><span>可以刷卡嗎？</span></div><div class="kr"><b>영수증 주세요.</b><span>請給我收據</span></div><div class="kr"><b>예약했어요.</b><span>我有訂位</span></div></details>
+<div class="sec">🏛 景點與行程</div>
+<div class="sc"><div class="bn b1"><i data-k="temple"></i></div><div class="sb"><h3>海東龍宮寺</h3><p>計程車約 40 分鐘 · ₩28,000</p><div class="ch2"><span class="ch">🕒 04:30–19:20（入場至 18:50）</span><span class="ch">🎫 免費</span></div><div class="row"><span><span class="ch">⏰ 09:30</span></span><a class="pill" href="https://www.google.com/maps/dir/?api=1&destination=Haedong%20Yonggungsa" target="_blank" rel="noopener">📍 導航</a></div></div></div>
+<div class="sc"><div class="bn b2"><i data-k="luge"></i></div><div class="sb"><h3>Skyline Luge</h3><p>釜山 Pass 開卡，48 小時內（到 10/29 13:30 前）要入場 Spa Land</p><div class="ch2"><span class="ch">🕒 10:00–19:00（售票至 18:30）</span><span class="ch">🎫 2 趟 ₩28,000 起</span><span class="ch y">Pass 免費</span></div><div class="row"><span><span class="ch">⏰ 13:30</span></span><a class="pill" href="https://www.google.com/maps/dir/?api=1&destination=Skyline%20Luge%20Busan" target="_blank" rel="noopener">📍 導航</a></div></div></div>
+<div class="sc"><div class="bn b3"><i data-k="train"></i></div><div class="sb"><h3>青沙浦 海岸列車／膠囊列車</h3><p>到尾浦站 · Pass 含海岸列車（膠囊列車請現場確認）</p><div class="ch2"><span class="ch">🕒 09:30 起，末班依季節</span><span class="ch">🎫 海岸列車單程 ₩7,000 起</span><span class="ch y">Pass 免費</span></div><div class="row"><span><span class="ch">⏰ 17:00</span></span><a class="pill" href="https://www.google.com/maps/dir/?api=1&destination=Cheongsapo%20Blueline%20Park" target="_blank" rel="noopener">📍 導航</a></div></div></div>
+<div class="sc"><div class="bn b0"><i data-k="sky"></i></div><div class="sb"><h3>X the Sky</h3><p>選配</p><div class="ch2"><span class="ch">🕒 10:00–21:00（售票至 20:30）</span><span class="ch">🎫 約 US$20／人</span><span class="ch y">Pass 免費</span></div><div class="row"><span><span class="ch">⏰ 18:30</span></span><a class="pill" href="https://www.google.com/maps/dir/?api=1&destination=X%20the%20Sky%20Busan" target="_blank" rel="noopener">📍 導航</a></div></div></div>
+<div class="sec">🍽 餐廳與咖啡</div>
+<div class="sc"><div class="bn bf"><i data-k="food"></i></div><div class="sb"><h3>Egg Drop 或豬肉湯飯</h3><p>約 ₩15,000</p><div class="row"><span><span class="ch">⏰ 08:30</span> <span class="ch y">必吃</span></span><a class="pill" href="https://www.google.com/maps/dir/?api=1&destination=Egg%20Drop%20Haeundae" target="_blank" rel="noopener">📍 導航</a></div></div></div>
+<div class="sc"><div class="bn bf"><i data-k="food"></i></div><div class="sb"><h3>機張市場帝王蟹</h3><p>約 ₩120,000（時價）</p><div class="row"><span><span class="ch">⏰ 11:00</span> <span class="ch y">必吃</span></span><a class="pill" href="https://www.google.com/maps/dir/?api=1&destination=Gijang%20Market%20Busan" target="_blank" rel="noopener">📍 導航</a></div></div></div>
+<div class="sc"><div class="bn bf"><i data-k="coffee"></i></div><div class="sb"><h3>Liberta 海景咖啡</h3><p>約 ₩20,000</p><div class="row"><span><span class="ch">⏰ 15:45</span> <span class="ch y">必吃</span></span><a class="pill" href="https://www.google.com/maps/dir/?api=1&destination=Liberta%20Gijang%20Busan" target="_blank" rel="noopener">📍 導航</a></div></div></div>
+<div class="sc"><div class="bn bf"><i data-k="food"></i></div><div class="sb"><h3>老虎冰淇淋大福</h3><p>尾浦站</p><div class="row"><span><span class="ch">⏰ 17:45</span> <span class="ch y">必吃</span></span><a class="pill" href="https://www.google.com/maps/dir/?api=1&destination=Tiger%20Daifuku%20Mipo%20Busan" target="_blank" rel="noopener">📍 導航</a></div></div></div>
+<div class="sec">📝 備忘</div>
+<div class="card">
+<div class="memo"><b>15:00</b><span>韓版灌籃高手平交道<small style="display:block;color:var(--sub)">確切位置請自行補上</small></span></div>
+<div class="memo"><b>19:30</b><span>晚餐自選<small style="display:block;color:var(--sub)">約 ₩50,000</small></span></div></div>
+<div class="tip">ℹ️ 營業時間與票價整理自 Klook、Trazy、Busan 官方與旅遊網站，可能調整，出發前請以官網或 Naver Map 為準。</div>
+</div>
+
+<div class="day" id="d2" hidden>
+<div class="dh"><div class="bd">3<small>DAY</small></div><div><span class="dt">10/28（週三）· 約 ₩250,000</span><h2>影島 → 南浦</h2></div></div>
+<div class="sec">🚕 交通</div>
+<div class="card"><table>
+<tr><th>時間</th><th>區間</th><th>備註</th></tr>
+<tr><td>09:30</td><td>計程車到影島</td><td><small>約 50 分鐘 · ₩30,000</small></td></tr></table></div>
+<div class="tip">💡 Arte Museum 建議先訂時段；松島纜車要在日落前到。</div>
+<div class="pills"><a class="pill" href="https://www.google.com/maps/dir/?api=1&destination=Egg%20Drop%20Haeundae" target="_blank" rel="noopener">📍 Egg Drop 海雲台店</a><a class="pill" href="https://www.google.com/maps/dir/?api=1&destination=Arte%20Museum%20Busan" target="_blank" rel="noopener">📍 Arte Museum</a><a class="pill" href="https://www.google.com/maps/dir/?api=1&destination=Huinnyeoul%20Culture%20Village" target="_blank" rel="noopener">📍 白淺灘文化村</a><a class="pill" href="https://www.google.com/maps/dir/?api=1&destination=Huinnyeoul%20Foot%20Bath%20Cafe%20Busan" target="_blank" rel="noopener">📍 白淺灘足浴咖啡</a><a class="pill" href="https://www.google.com/maps/dir/?api=1&destination=Songdo%20Cable%20Car%20Busan" target="_blank" rel="noopener">📍 松島纜車看夕陽</a><a class="pill" href="https://www.google.com/maps/dir/?api=1&destination=Lisin%20Hanwoo%20Busan" target="_blank" rel="noopener">📍 Lisin 韓牛晚餐</a><a class="pill" href="https://www.google.com/maps/dir/?api=1&destination=BIFF%20Square%20Busan" target="_blank" rel="noopener">📍 BIFF 廣場＋樂天超市</a><a class="pill" href="https://www.google.com/maps/dir/?api=1&destination=Yeongdo%20Pojangmacha%20Busan" target="_blank" rel="noopener">📍 影島布帳馬車</a></div>
+<details><summary>🇰🇷 計程車韓文指南</summary><div class="kr"><b>여기로 가 주세요.</b><span>請載我到這裡（出示地圖）</span></div><div class="kr"><b>여기서 세워 주세요.</b><span>請在這裡停車</span></div><div class="kr"><b>카드 결제 되나요?</b><span>可以刷卡嗎？</span></div><div class="kr"><b>영수증 주세요.</b><span>請給我收據</span></div><div class="kr"><b>예약했어요.</b><span>我有訂位</span></div></details>
+<div class="sec">🏛 景點與行程</div>
+<div class="sc"><div class="bn b1"><i data-k="museum"></i></div><div class="sb"><h3>Arte Museum</h3><p>Pass 免費（平日票價 ₩19,000／人）</p><div class="ch2"><span class="ch">🕒 10:00–20:00（最後入場 19:00）</span><span class="ch">🎫 平日 ₩19,000／人</span><span class="ch y">Pass 免費</span></div><div class="row"><span><span class="ch">⏰ 10:30</span></span><a class="pill" href="https://www.google.com/maps/dir/?api=1&destination=Arte%20Museum%20Busan" target="_blank" rel="noopener">📍 導航</a></div></div></div>
+<div class="sc"><div class="bn b2"><i data-k="village"></i></div><div class="sb"><h3>白淺灘文化村</h3><div class="ch2"><span class="ch">🕒 全天開放</span><span class="ch">🎫 免費</span></div><div class="row"><span><span class="ch">⏰ 13:00</span></span><a class="pill" href="https://www.google.com/maps/dir/?api=1&destination=Huinnyeoul%20Culture%20Village" target="_blank" rel="noopener">📍 導航</a></div></div></div>
+<div class="sc"><div class="bn b3"><i data-k="cable"></i></div><div class="sb"><h3>松島纜車看夕陽</h3><p>Pass 免費 · 日落約 17:45</p><div class="ch2"><span class="ch">🕒 秋季約 09:00–21:00（依天氣）</span><span class="ch">🎫 來回 ₩30,000 起</span><span class="ch y">Pass 免費</span></div><div class="row"><span><span class="ch">⏰ 16:30</span></span><a class="pill" href="https://www.google.com/maps/dir/?api=1&destination=Songdo%20Cable%20Car%20Busan" target="_blank" rel="noopener">📍 導航</a></div></div></div>
+<div class="sc"><div class="bn b0"><i data-k="shop"></i></div><div class="sb"><h3>BIFF 廣場＋樂天超市</h3><div class="ch2"><span class="ch">🕒 依店家，未查證，出發前看 Naver Map</span></div><div class="row"><span><span class="ch">⏰ 20:00</span></span><a class="pill" href="https://www.google.com/maps/dir/?api=1&destination=BIFF%20Square%20Busan" target="_blank" rel="noopener">📍 導航</a></div></div></div>
+<div class="sec">🍽 餐廳與咖啡</div>
+<div class="sc"><div class="bn bf"><i data-k="food"></i></div><div class="sb"><h3>Egg Drop 海雲台店</h3><p>約 ₩15,000</p><div class="row"><span><span class="ch">⏰ 08:30</span> <span class="ch y">必吃</span></span><a class="pill" href="https://www.google.com/maps/dir/?api=1&destination=Egg%20Drop%20Haeundae" target="_blank" rel="noopener">📍 導航</a></div></div></div>
+<div class="sc"><div class="bn bf"><i data-k="coffee"></i></div><div class="sb"><h3>白淺灘足浴咖啡</h3><p>約 ₩25,000</p><div class="row"><span><span class="ch">⏰ 14:30</span> <span class="ch y">必吃</span></span><a class="pill" href="https://www.google.com/maps/dir/?api=1&destination=Huinnyeoul%20Foot%20Bath%20Cafe%20Busan" target="_blank" rel="noopener">📍 導航</a></div></div></div>
+<div class="sc"><div class="bn bf"><i data-k="food"></i></div><div class="sb"><h3>Lisin 韓牛晚餐</h3><p>約 ₩100,000</p><div class="row"><span><span class="ch">⏰ 18:30</span> <span class="ch y">必吃</span></span><a class="pill" href="https://www.google.com/maps/dir/?api=1&destination=Lisin%20Hanwoo%20Busan" target="_blank" rel="noopener">📍 導航</a></div></div></div>
+<div class="sc"><div class="bn bf"><i data-k="food"></i></div><div class="sb"><h3>影島布帳馬車</h3><div class="row"><span><span class="ch">⏰ 21:00</span> <span class="ch y">必吃</span></span><a class="pill" href="https://www.google.com/maps/dir/?api=1&destination=Yeongdo%20Pojangmacha%20Busan" target="_blank" rel="noopener">📍 導航</a></div></div></div>
+<div class="tip">ℹ️ 營業時間與票價整理自 Klook、Trazy、Busan 官方與旅遊網站，可能調整，出發前請以官網或 Naver Map 為準。</div>
+</div>
+
+<div class="day" id="d3" hidden>
+<div class="dh"><div class="bd">4<small>DAY</small></div><div><span class="dt">10/29（週四）· 約 ₩200,000（不含購物）</span><h2>新世界 → 廣安里</h2></div></div>
+<div class="sec">🚕 交通</div>
+<div class="card"><table>
+<tr><th>時間</th><th>區間</th><th>備註</th></tr>
+<tr><td>18:30</td><td>計程車到廣安里</td><td><small>約 ₩12,000，16:00 後可入住</small></td></tr></table></div>
+<div class="tip">💡 Pass 約在 13:30 到期，要先入場 Spa Land，所以先去 Spa Land 再逛新世界。</div>
+<div class="pills"><a class="pill" href="https://www.google.com/maps/dir/?api=1&destination=Raynes%20Busan" target="_blank" rel="noopener">📍 Raynes 早餐</a><a class="pill" href="https://www.google.com/maps/dir/?api=1&destination=%E8%B1%9A%E7%AC%91%20Busan" target="_blank" rel="noopener">📍 豚笑</a><a class="pill" href="https://www.google.com/maps/dir/?api=1&destination=Shinsegae%20Centum%20City" target="_blank" rel="noopener">📍 新世界 Centum City</a><a class="pill" href="https://www.google.com/maps/dir/?api=1&destination=Spa%20Land%20Centum%20City" target="_blank" rel="noopener">📍 Spa Land 汗蒸幕</a><a class="pill" href="https://www.google.com/maps/dir/?api=1&destination=Gwangalli%20Beach" target="_blank" rel="noopener">📍 計程車到廣安里</a><a class="pill" href="https://www.google.com/maps/dir/?api=1&destination=Gwangalli%20Beach" target="_blank" rel="noopener">📍 廣安里夜景＋晚餐</a></div>
+<details><summary>🇰🇷 計程車韓文指南</summary><div class="kr"><b>여기로 가 주세요.</b><span>請載我到這裡（出示地圖）</span></div><div class="kr"><b>여기서 세워 주세요.</b><span>請在這裡停車</span></div><div class="kr"><b>카드 결제 되나요?</b><span>可以刷卡嗎？</span></div><div class="kr"><b>영수증 주세요.</b><span>請給我收據</span></div><div class="kr"><b>예약했어요.</b><span>我有訂位</span></div></details>
+<div class="sec">🏛 景點與行程</div>
+<div class="sc"><div class="bn b1"><i data-k="shop"></i></div><div class="sb"><h3>新世界 Centum City</h3><p>計程車約 ₩15,000，B2 免費置物櫃寄放行李</p><div class="ch2"><span class="ch">🕒 約 10:30–20:00（未查證），公休日請查官網</span></div><div class="row"><span><span class="ch">⏰ 12:30</span></span><a class="pill" href="https://www.google.com/maps/dir/?api=1&destination=Shinsegae%20Centum%20City" target="_blank" rel="noopener">📍 導航</a></div></div></div>
+<div class="sc"><div class="bn b2"><i data-k="spa"></i></div><div class="sb"><h3>Spa Land 汗蒸幕</h3><p>Pass 免費 4 小時（須在 Pass 到期前入場），超時每小時約 ₩5,000</p><div class="ch2"><span class="ch">🕒 09:00–22:00（最後入場 21:00）</span><span class="ch">🎫 約 ₩18,000／4 小時（估）</span><span class="ch y">Pass 免費</span></div><div class="row"><span><span class="ch">⏰ 13:00</span></span><a class="pill" href="https://www.google.com/maps/dir/?api=1&destination=Spa%20Land%20Centum%20City" target="_blank" rel="noopener">📍 導航</a></div></div></div>
+<div class="sec">🍽 餐廳與咖啡</div>
+<div class="sc"><div class="bn bf"><i data-k="food"></i></div><div class="sb"><h3>Raynes 早餐（選配）</h3><p>10:00 開，若趕不上候位就略過</p><div class="row"><span><span class="ch">⏰ 10:00</span> <span class="ch y">必吃</span></span><a class="pill" href="https://www.google.com/maps/dir/?api=1&destination=Raynes%20Busan" target="_blank" rel="noopener">📍 導航</a></div></div></div>
+<div class="sc"><div class="bn bf"><i data-k="food"></i></div><div class="sb"><h3>豚笑</h3><p>Catchtable 候位 2 人 · 約 ₩40,000</p><div class="row"><span><span class="ch">⏰ 11:10</span> <span class="ch y">必吃</span></span><a class="pill" href="https://www.google.com/maps/dir/?api=1&destination=%E8%B1%9A%E7%AC%91%20Busan" target="_blank" rel="noopener">📍 導航</a></div></div></div>
+<div class="sc"><div class="bn bf"><i data-k="food"></i></div><div class="sb"><h3>廣安里夜景＋晚餐</h3><p>約 ₩50,000</p><div class="row"><span><span class="ch">⏰ 19:30</span> <span class="ch y">必吃</span></span><a class="pill" href="https://www.google.com/maps/dir/?api=1&destination=Gwangalli%20Beach" target="_blank" rel="noopener">📍 導航</a></div></div></div>
+<div class="sec">📝 備忘</div>
+<div class="card">
+<div class="memo"><b>10:30</b><span>退房<small style="display:block;color:var(--sub)">順路買 Seagull Sand 伴手禮</small></span></div>
+<div class="memo"><b>16:30</b><span>新世界逛街<small style="display:block;color:var(--sub)">3F 外國人服務中心辦會員卡（帶護照）；B2 潮牌區；1F Shack Shack；Mega Coffee；3F 退稅</small></span></div></div>
+<div class="tip">ℹ️ 營業時間與票價整理自 Klook、Trazy、Busan 官方與旅遊網站，可能調整，出發前請以官網或 Naver Map 為準。</div>
+</div>
+
+<div class="day" id="d4" hidden>
+<div class="dh"><div class="bd">5<small>DAY</small></div><div><span class="dt">10/30（週五）· 約 ₩120,000（不含醫美、購物）</span><h2>醫美 → 回程</h2></div></div>
+<div class="sec">🚕 交通</div>
+<div class="card"><table>
+<tr><th>時間</th><th>區間</th><th>備註</th></tr>
+<tr><td>09:15</td><td>計程車到 Midam clinic</td><td><small>約 ₩15,000（地址待補）</small></td></tr>
+<tr><td>13:00</td><td>計程車到新世界</td><td><small>約 ₩20,000，B2 寄放行李</small></td></tr>
+<tr><td>18:15</td><td>取行李，計程車到機場</td><td><small>約 ₩28,000</small></td></tr></table></div>
+<div class="tip">💡 醫美前先確認地址與時間；行李先帶著，看診後寄放新世界。</div>
+<div class="pills"><a class="pill" href="https://www.google.com/maps/dir/?api=1&destination=Midam%20clinic%20Busan" target="_blank" rel="noopener">📍 計程車到 Midam clinic</a><a class="pill" href="https://www.google.com/maps/dir/?api=1&destination=Shinsegae%20Centum%20City" target="_blank" rel="noopener">📍 計程車到新世界</a><a class="pill" href="https://www.google.com/maps/dir/?api=1&destination=Gimhae%20International%20Airport" target="_blank" rel="noopener">📍 取行李，計程車到機場</a></div>
+<details><summary>🇰🇷 計程車韓文指南</summary><div class="kr"><b>여기로 가 주세요.</b><span>請載我到這裡（出示地圖）</span></div><div class="kr"><b>여기서 세워 주세요.</b><span>請在這裡停車</span></div><div class="kr"><b>카드 결제 되나요?</b><span>可以刷卡嗎？</span></div><div class="kr"><b>영수증 주세요.</b><span>請給我收據</span></div><div class="kr"><b>예약했어요.</b><span>我有訂位</span></div></details>
+<div class="sec">📝 備忘</div>
+<div class="card">
+<div class="memo"><b>08:30</b><span>退房、早餐<small style="display:block;color:var(--sub)">行李隨身帶 · 約 ₩15,000</small></span></div>
+<div class="memo"><b>10:00</b><span>醫美看診<small style="display:block;color:var(--sub)">預留 2–3 小時</small></span></div>
+<div class="memo"><b>13:30</b><span>Shack Shack、Mega Coffee、補貨<small style="display:block;color:var(--sub)">11:00 記得查要不要搶 Catchtable 號碼牌</small></span></div>
+<div class="memo"><b>21:50</b><span>真航空 LJ577 起飛<small style="display:block;color:var(--sub)">23:40 抵達桃園 T1</small></span></div></div>
+<div class="tip">ℹ️ 營業時間與票價整理自 Klook、Trazy、Busan 官方與旅遊網站，可能調整，出發前請以官網或 Naver Map 為準。</div>
+</div>
+</section>
+
+<!-- 預算 -->
+<section class="tab" id="t-bg" hidden>
+
+<div class="sec">🏨 住宿</div>
+<div class="card">
+<div class="li"><span>10/26–10/29（3 晚）Elmomento<small>10/20 扣款</small></span><b>待補</b></div>
+<div class="li"><span>10/29–10/30（1 晚）廣安里</span><b>待補</b></div></div>
+<div class="sec">🍽🚕 每日餐飲與交通（估）</div>
+<div class="card">
+<div class="li"><span>Day1 · 西面 → 海雲台</span><b>₩230,000<small>NT$5,111</small></b></div>
+<div class="li"><span>Day2 · 機張區</span><b>₩290,000<small>NT$6,444</small></b></div>
+<div class="li"><span>Day3 · 影島 → 南浦</span><b>₩250,000<small>NT$5,556</small></b></div>
+<div class="li"><span>Day4 · 新世界 → 廣安里</span><b>₩200,000<small>NT$4,444</small></b></div>
+<div class="li"><span>Day5 · 醫美 → 回程</span><b>₩120,000<small>NT$2,667</small></b></div>
+<div class="li tot"><span>小計</span><b>₩1,090,000<small>約 NT$24,222</small></b></div></div>
+<div class="tip">以 ₩45 ≈ NT$1 粗估，不含機票、住宿、購物、醫美。</div>
+</section>
+
+<!-- 連結 -->
+<section class="tab" id="t-ln" hidden>
+
+<div class="sec">🔗 常用連結</div>
+<div class="card">
+<div class="pills"><a class="pill o" href="https://map.naver.com" target="_blank" rel="noopener">Naver Map</a><a class="pill o" href="https://maps.google.com" target="_blank" rel="noopener">Google Maps</a><a class="pill o" href="https://papago.naver.com" target="_blank" rel="noopener">Papago 翻譯</a><a class="pill o" href="https://www.catchtable.net" target="_blank" rel="noopener">Catchtable</a><a class="pill o" href="https://www.klook.com" target="_blank" rel="noopener">Klook 訂單</a><a class="pill o" href="https://www.k-eta.go.kr" target="_blank" rel="noopener">K-ETA</a></div></div>
+</section>
+
+</main>
+
+<nav id="nav">
+<button data-t="ov"><i>🧭</i>總覽</button>
+<button data-t="pp"><i>📋</i>準備</button>
+<button data-t="day"><i>📍</i>行程</button>
+<button data-t="bg"><i>👛</i>預算</button>
+<button data-t="ln"><i>🔗</i>連結</button>
+</nav>
 <script src="script.js"></script></body></html>
