@@ -1,7 +1,7 @@
 var M=function(q){return 'https://www.google.com/maps/dir/?api=1&destination='+encodeURIComponent(q)};
 var D=[
 {d:'10/26',w:'週一',t:'西面 → 海雲台',s:'約 ₩230,000',i:[
-['06:10','抵達金海機場','入境審查、領行李、領網卡，預留 1.5 小時','Gimhae International Airport'],
+['06:10','抵達金海機場','入境審查、領行李、領釜山pass實體卡，預留 1.5 小時','Gimhae International Airport'],
 ['07:45','計程車到西面','約 40 分鐘 · ₩25,000'],
 ['08:30','All Sunday Bagel 早餐','約 ₩20,000','All Sunday Bagel Seomyeon Busan','f'],
 ['09:45','田浦咖啡街','Franklin Coffee Roasters 喝奶茶','Jeonpo Cafe Street Busan'],
