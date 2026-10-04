@@ -1,73 +1,11 @@
-var M=function(q){return 'https://www.google.com/maps/dir/?api=1&destination='+encodeURIComponent(q)};
-var D=[
-{d:'10/26',w:'週一',t:'西面 → 海雲台',s:'約 ₩230,000',i:[
-['06:10','抵達金海機場','入境審查、領行李、領釜山pass實體卡，預留 1.5 小時','Gimhae International Airport'],
-['07:45','計程車到西面','約 40 分鐘 · ₩25,000'],
-['08:30','All Sunday Bagel 早餐','約 ₩20,000','All Sunday Bagel Seomyeon Busan','f'],
-['09:45','田浦咖啡街','Franklin Coffee Roasters 喝奶茶','Jeonpo Cafe Street Busan'],
-['10:30','樂天百貨西面','B2 寄放行李（前 3 小時免費，之後每小時 ₩1,000）、換韓幣','Lotte Department Store Seomyeon'],
-['12:30','老宅邸燒肉','已訂位 2 人 · 約 ₩80,000','Old Mansion Seomyeon Busan','f'],
-['14:00','逛樂天超市、取行李'],
-['14:30','計程車到海雲台','約 30 分鐘 · ₩18,000'],
-['15:00','Elmomento 寄放行李','16:00 才能入住','Elmomento Haeundae Busan','t'],
-['15:15','海理團路','買 butter sand 伴手禮','Haerimdan-gil Busan'],
-['18:30','海雲台傳統市場晚餐','約 ₩40,000，再吃 Prahran 法式吐司','Haeundae Traditional Market','f']]},
-{d:'10/27',w:'週二',t:'機張區',s:'約 ₩290,000',i:[
-['08:30','Egg Drop 或豬肉湯飯','約 ₩15,000','Egg Drop Haeundae','f'],
-['09:30','海東龍宮寺','計程車約 40 分鐘 · ₩28,000','Haedong Yonggungsa'],
-['11:00','機張市場帝王蟹','約 ₩120,000（時價）','Gijang Market Busan','f'],
-['13:30','Skyline Luge','釜山 Pass 開卡，48 小時內（到 10/29 13:30 前）要入場 Spa Land','Skyline Luge Busan'],
-['15:00','韓版灌籃高手平交道','確切位置請自行補上'],
-['15:45','Liberta 海景咖啡','約 ₩20,000','Liberta Gijang Busan','f'],
-['17:00','青沙浦 海岸列車／膠囊列車','到尾浦站 · Pass 含海岸列車（膠囊列車請現場確認）','Cheongsapo Blueline Park'],
-['17:45','老虎冰淇淋大福','尾浦站','Tiger Daifuku Mipo Busan','f'],
-['18:30','X the Sky','選配','X the Sky Busan'],
-['19:30','晚餐自選','約 ₩50,000','','f']]},
-{d:'10/28',w:'週三',t:'影島 → 南浦',s:'約 ₩250,000',i:[
-['08:30','Egg Drop 海雲台店','約 ₩15,000','Egg Drop Haeundae','f'],
-['09:30','計程車到影島','約 50 分鐘 · ₩30,000'],
-['10:30','Arte Museum','Pass 免費（平日票價 ₩19,000／人）','Arte Museum Busan'],
-['13:00','白淺灘文化村','','Huinnyeoul Culture Village'],
-['14:30','白淺灘足浴咖啡','約 ₩25,000','Huinnyeoul Foot Bath Cafe Busan','f'],
-['16:30','松島纜車看夕陽','Pass 免費 · 日落約 17:45','Songdo Cable Car Busan'],
-['18:30','Lisin 韓牛晚餐','約 ₩100,000','Lisin Hanwoo Busan','f'],
-['20:00','BIFF 廣場＋樂天超市','','BIFF Square Busan'],
-['21:00','影島布帳馬車','','Yeongdo Pojangmacha Busan','f']]},
-{d:'10/29',w:'週四',t:'新世界 → 廣安里',s:'約 ₩200,000（不含購物）',i:[
-['10:00','Raynes 早餐（選配）','10:00 開，若趕不上候位就略過','Raynes Busan','f'],
-['10:30','退房','順路買 Seagull Sand 伴手禮'],
-['11:10','豚笑','Catchtable 候位 2 人 · 約 ₩40,000','豚笑 Busan','f'],
-['12:30','新世界 Centum City','計程車約 ₩15,000，B2 免費置物櫃寄放行李','Shinsegae Centum City'],
-['13:00','Spa Land 汗蒸幕','Pass 免費 4 小時（須在 Pass 到期前入場），超時每小時約 ₩5,000','Spa Land Centum City'],
-['16:30','新世界逛街','3F 外國人服務中心辦會員卡（帶護照）；B2 潮牌區；1F Shack Shack；Mega Coffee；3F 退稅'],
-['18:30','計程車到廣安里','約 ₩12,000，16:00 後可入住','Gwangalli Beach','t'],
-['19:30','廣安里夜景＋晚餐','約 ₩50,000','Gwangalli Beach','f']]},
-{d:'10/30',w:'週五',t:'醫美 → 回程',s:'約 ₩120,000（不含醫美、購物）',i:[
-['08:30','退房、早餐','行李隨身帶 · 約 ₩15,000','','f'],
-['09:15','計程車到 Midam clinic','約 ₩15,000（地址待補）','Midam clinic Busan'],
-['10:00','醫美看診','預留 2–3 小時'],
-['13:00','計程車到新世界','約 ₩20,000，B2 寄放行李','Shinsegae Centum City'],
-['13:30','Shack Shack、Mega Coffee、補貨','11:00 記得查要不要搶 Catchtable 號碼牌','','f'],
-['18:15','取行李，計程車到機場','約 ₩28,000','Gimhae International Airport'],
-['21:50','真航空 LJ577 起飛','23:40 抵達桃園 T1']]}
-];
-
-var P=[['🪪 證件 & 重要物品',['護照（效期 6 個月以上）','機票與訂單截圖','釜山 Pass（Klook JMP851357）','Catchtable 訂位截圖','信用卡、韓幣、台幣']],['🔌 3C & 電子',['eSIM 或 SIM 卡','行動電源','轉接頭（圓兩孔）','充電線、耳機']],['🧥 衣物',['保暖外套（10–20°C）','好走的鞋','泳衣、毛巾（Spa Land、足浴）','換洗衣物']],['🧴 盥洗 & 個人用品',['牙刷牙膏','保養品、防曬','口罩']],['💊 藥品 & 急救',['常備藥','OK 繃','腸胃藥']],['🛍 其他',['折疊購物袋（裝戰利品）','退稅用的護照影本']]];
-var TIP=['出關預留 1.5 小時；百貨 10:30 才開，先吃早餐再寄行李。','13:30 Skyline Luge 開 Pass，之後 48 小時內要用完 Arte、松島纜車與 Spa Land。','Arte Museum 建議先訂時段；松島纜車要在日落前到。','Pass 約在 13:30 到期，要先入場 Spa Land，所以先去 Spa Land 再逛新世界。','醫美前先確認地址與時間；行李先帶著，看診後寄放新世界。'];
-var Q=[['여기로 가 주세요.','請載我到這裡（出示地圖）'],['여기서 세워 주세요.','請在這裡停車'],['카드 결제 되나요?','可以刷卡嗎？'],['영수증 주세요.','請給我收據'],['예약했어요.','我有訂位']];
-var B=[230,290,250,200,120],tab='day',cur=0;
-var NAV=[['ov','🧭','總覽'],['pp','📋','準備'],['day','📍','行程'],['bg','👛','預算'],['ln','🔗','連結']];
+/* 釜山行程 App：行程內容在 index.html，這裡只負責切換分頁、行李勾選與插畫 */
+var tab='day',cur=0,n0=0;
 function $(i){return document.getElementById(i)}
 function ck(k){try{return localStorage.getItem(k)==='1'}catch(e){return false}}
 function sv(k,v){try{localStorage.setItem(k,v?'1':'0')}catch(e){}upd()}
 function upd(){var a=document.querySelectorAll('label.ck input');if(!a.length)return;var n=0;a.forEach(function(c){if(c.checked)n++});$('pg').style.width=(n/a.length*100)+'%';$('pt').textContent=n+'/'+a.length}
-function sec(t){return '<div class="sec">'+t+'</div>'}
-function pill(q,t,o){return '<a class="pill'+(o?' o':'')+'" href="'+M(q)+'" target="_blank" rel="noopener">📍 '+t+'</a>'}
-function lk(u,t){return '<a class="pill o" href="'+u+'" target="_blank" rel="noopener">'+t+'</a>'}
-function em(t){var m=[[/寺/,'⛩️'],[/咖啡|Liberta/,'☕'],[/纜車/,'🚡'],[/Museum|美術/,'🖼️'],[/村/,'🏘️'],[/Spa/,'♨️'],[/新世界|樂天|BIFF|百貨|海理團/,'🛍️'],[/機場/,'✈️'],[/Luge/,'🛷'],[/海雲台|Elmomento|廣安里|平交道/,'🌊']];for(var i=0;i<m.length;i++)if(m[i][0].test(t))return m[i][1];return '📍'}
-var n0=0;
-var INFO=[[/龍宮寺/,'04:30–19:20（入場至 18:50）','免費',0],[/Luge/,'10:00–19:00（售票至 18:30）','2 趟 ₩28,000 起',1],[/青沙浦/,'09:30 起，末班依季節','海岸列車單程 ₩7,000 起',1],[/X the Sky/,'10:00–21:00（售票至 20:30）','約 US$20／人',1],[/Arte/,'10:00–20:00（最後入場 19:00）','平日 ₩19,000／人',1],[/白淺灘文化村/,'全天開放','免費',0],[/松島纜車/,'秋季約 09:00–21:00（依天氣）','來回 ₩30,000 起',1],[/Spa Land/,'09:00–22:00（最後入場 21:00）','約 ₩18,000／4 小時（估）',1],[/機張市場|田浦|海理團|傳統市場|BIFF|布帳馬車|足浴/,'依店家，未查證，出發前看 Naver Map','',0],[/新世界|樂天百貨/,'約 10:30–20:00（未查證），公休日請查官網','',0]];
-function info(t){for(var i=0;i<INFO.length;i++)if(INFO[i][0].test(t))return INFO[i]}
+
+/* ---- 插畫 ---- */
 function W(y,c){return '<path d="M0 '+y+'q25 -7 50 0t50 0t50 0t50 0t50 0t50 0V90H0Z" fill="'+c+'"/>'}
 function ST(x,y,d){return '<path d="M'+x+' '+y+'q-8 -9 0 -17t0 -15" stroke="#fff" stroke-width="5" fill="none" opacity=".9" stroke-linecap="round" transform="translate('+(d||0)+' 0)"/>'}
 var PAL={temple:['#cfe8f7','#f6e3d0'],luge:['#cfeee0','#e6f6ff'],train:['#ffe4c7','#cfe8f7'],sky:['#c9def6','#f7e8f2'],museum:['#5b4bb0','#e69bd0'],village:['#ffe9c9','#cfe8f7'],cable:['#d6ebfa','#fdf1d6'],spa:['#ffe1e6','#e1f3ff'],plane:['#cfe8f7','#eef7fd'],shop:['#ffe0ea','#fff3cc'],coffee:['#f3e3d3','#ffeedd'],food:['#ffe3d0','#fff0d9'],sea:['#bfe3f6','#f6efd9']};
@@ -85,37 +23,27 @@ shop:function(){return '<rect x="70" y="40" width="50" height="44" rx="4" fill="
 coffee:function(){return '<ellipse cx="140" cy="80" rx="46" ry="6" fill="#e5cdb5"/><path d="M110 44h60v20a30 22 0 0 1 -60 0z" fill="#fff"/><path d="M170 50q22 0 20 14t-22 12" stroke="#fff" stroke-width="6" fill="none"/><ellipse cx="140" cy="44" rx="30" ry="5" fill="#a9724a"/>'+ST(128,38)+ST(150,38)},
 food:function(){return '<path d="M92 52h116a58 36 0 0 1 -116 0z" fill="#e5698a"/><rect x="88" y="48" width="124" height="6" rx="3" fill="#c94b78"/><path d="M100 48q50 -22 100 0z" fill="#ffd166"/><path d="M196 14L236 46M206 12L246 42" stroke="#a9724a" stroke-width="3"/>'+ST(130,34)+ST(160,34)},
 sea:function(){return '<circle cx="70" cy="24" r="12" fill="#ffd66b"/><path d="M0 54H300" stroke="#4a6fa5" stroke-width="3"/><path d="M90 54V16M210 54V16" stroke="#4a6fa5" stroke-width="3"/><path d="M0 52Q45 50 90 16Q150 56 210 16Q255 50 300 52" stroke="#4a6fa5" stroke-width="2" fill="none"/>'+W(58,'#8cc6e8')+W(70,'#6bb0dc')+'<rect y="80" width="300" height="10" fill="#f3e2b8"/>'}};
-function key(t,f){if(f)return /咖啡|Liberta/.test(t)?'coffee':'food';var m=[[/龍宮寺/,'temple'],[/Luge/,'luge'],[/列車|青沙浦/,'train'],[/X the Sky/,'sky'],[/Arte|Museum/,'museum'],[/村/,'village'],[/纜車/,'cable'],[/Spa/,'spa'],[/機場/,'plane'],[/新世界|樂天|BIFF|百貨|海理團|市場/,'shop'],[/咖啡|足浴/,'coffee']];for(var i=0;i<m.length;i++)if(m[i][0].test(t))return m[i][1];return 'sea'}
-function ill(t,f){var k=key(t,f),p=PAL[k],g='g'+n0;return '<svg viewBox="0 0 300 90" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="'+g+'" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="'+p[0]+'"/><stop offset="1" stop-color="'+p[1]+'"/></linearGradient></defs><rect width="300" height="90" fill="url(#'+g+')"/>'+SC[k]()+'</svg>'}
-function card(a,f){n0++;var q=f?0:info(a[1]);return '<div class="sc"><div class="bn '+(f?'bf':'b'+(n0%4))+'">'+ill(a[1],f)+'</div><div class="sb"><h3>'+a[1]+'</h3>'+(a[2]?'<p>'+a[2]+'</p>':'')+(q?'<div class="ch2">'+(q[1]?'<span class="ch">🕒 '+q[1]+'</span>':'')+(q[2]?'<span class="ch">🎫 '+q[2]+'</span>':'')+(q[3]?'<span class="ch y">Pass 免費</span>':'')+'</div>':'')+'<div class="row"><span><span class="ch">⏰ '+a[0]+'</span>'+(f?' <span class="ch y">必吃</span>':'')+'</span>'+pill(a[3],'導航')+'</div></div></div>'}
-function day(){var x=D[cur],tr=[],sp=[],fd=[],ot=[];
-x.i.forEach(function(a){if(/計程車/.test(a[1]))tr.push(a);else if(a[4]==='f'&&a[3])fd.push(a);else if(a[3])sp.push(a);else ot.push(a)});
-var h='<div class="dh"><div class="bd">'+(cur+1)+'<small>DAY</small></div><div><span class="dt">'+x.d+'（'+x.w+'）· '+x.s+'</span><h2>'+x.t+'</h2></div></div>';
-if(tr.length)h+=sec('🚕 交通')+'<div class="card"><table><tr><th>時間</th><th>區間</th><th>備註</th></tr>'+tr.map(function(a){return '<tr><td>'+a[0]+'</td><td>'+a[1]+'</td><td><small>'+(a[2]||'')+'</small></td></tr>'}).join('')+'</table></div>';
-h+='<div class="tip">💡 '+TIP[cur]+'</div><div class="pills">'+x.i.filter(function(a){return a[3]}).map(function(a){return pill(a[3],a[1].replace(/（.*/,''))}).join('')+'</div>';
-h+='<details><summary>🇰🇷 計程車韓文指南</summary>'+Q.map(function(q){return '<div class="kr"><b>'+q[0]+'</b><span>'+q[1]+'</span></div>'}).join('')+'</details>';
-if(sp.length)h+=sec('🏛 景點與行程')+sp.map(function(a){return card(a)}).join('');
-if(fd.length)h+=sec('🍽 餐廳與咖啡')+fd.map(function(a){return card(a,1)}).join('');
-if(ot.length)h+=sec('📝 備忘')+'<div class="card">'+ot.map(function(a){return '<div class="memo"><b>'+a[0]+'</b><span>'+a[1]+(a[2]?'<small style="display:block;color:var(--sub)">'+a[2]+'</small>':'')+'</span></div>'}).join('')+'</div>';
-return h+'<div class="tip">ℹ️ 營業時間與票價整理自 Klook、Trazy、Busan 官方與旅遊網站，可能調整，出發前請以官網或 Naver Map 為準。</div>'}
-function ov(){return sec('✈️ 航班')+'<div class="card"><h3>去程 10/26（一）真航空 LJ578</h3><div class="fl"><b>02:40</b><span>2h30m ✈</span><b>06:10</b></div><p>TPE 桃園 T1 → PUS 釜山金海</p><hr style="border:0;border-top:1px solid var(--line)"><h3>回程 10/30（五）真航空 LJ577</h3><div class="fl"><b>21:50</b><span>2h50m ✈</span><b>23:40</b></div><p>PUS 釜山金海 → TPE 桃園 T1</p></div>'+
-sec('🏨 住宿一覽')+'<div class="card"><div class="li"><span>10/26–10/29（3 晚）<small>Gunam-ro 21beon-gil 6 · 入住 16:00 · 退房 11:00</small></span><b>Elmomento 海雲台</b></div><div class="li"><span>10/29–10/30（1 晚）<small>16:00 後入住 · 11:00 前退房</small></span><b>廣安里（待補）</b></div></div>'+
-sec('🗺 旅行路線')+'<div class="card">'+D.map(function(x,n){return '<div class="li"><span>Day'+(n+1)+' · '+x.d+'</span><b>'+x.t+'</b></div>'}).join('')+'</div>'+
-'<div class="tip">🎫 釜山 Pass 實體票卡 48 小時 × 2（Klook JMP851357）。訂單上的 2027/8/27 是使用期限；首次入場時開始計時，建議 10/27 13:30 在 Skyline Luge 開卡，10/29 13:30 前入場 Spa Land。</div>'}
-function pp(){return '<details><summary>🛡 保險</summary><div class="kr"><span>旅平險加旅遊不便險，並確認醫美是否在保障內。</span></div></details><details><summary>📋 其他</summary><div class="kr"><span>入境：台灣護照至 2026/12/31 免申請 K-ETA。<br>App：Naver Map、KakaoT、Papago、Catchtable。<br>出發前查：樂天西面、新世界 10/26、10/29 公休日。</span></div></details>'+
-'<div class="card"><h3>🧳 行李清單 <span id="pt" style="float:right;font-weight:400;color:var(--sub)"></span></h3><div class="bar"><i id="pg"></i></div></div>'+
-P.map(function(c,g){return '<details><summary>'+c[0]+'</summary>'+c[1].map(function(t,n){var k='pk'+g+'_'+n;return '<label class="ck"><input type="checkbox" '+(ck(k)?'checked':'')+' onchange="sv(\''+k+'\',this.checked)"><span>'+t+'</span></label>'}).join('')+'</details>'}).join('')}
-function bg(){var s=0,r=B.map(function(v,n){s+=v;return '<div class="li"><span>Day'+(n+1)+' · '+D[n].t+'</span><b>₩'+(v*1000).toLocaleString()+'<small>NT$'+Math.round(v*1000/45).toLocaleString()+'</small></b></div>'}).join('');
-return sec('🏨 住宿')+'<div class="card"><div class="li"><span>10/26–10/29（3 晚）Elmomento<small>10/20 扣款</small></span><b>待補</b></div><div class="li"><span>10/29–10/30（1 晚）廣安里</span><b>待補</b></div></div>'+
-sec('🍽🚕 每日餐飲與交通（估）')+'<div class="card">'+r+'<div class="li tot"><span>小計</span><b>₩'+(s*1000).toLocaleString()+'<small>約 NT$'+Math.round(s*1000/45).toLocaleString()+'</small></b></div></div><div class="tip">以 ₩45 ≈ NT$1 粗估，不含機票、住宿、購物、醫美。</div>'}
-function ln(){return sec('🔗 常用連結')+'<div class="card"><div class="pills">'+lk('https://map.naver.com','Naver Map')+lk('https://maps.google.com','Google Maps')+lk('https://papago.naver.com','Papago 翻譯')+lk('https://www.catchtable.net','Catchtable')+lk('https://www.klook.com','Klook 訂單')+lk('https://www.k-eta.go.kr','K-ETA')+'</div></div>'}
-function render(){$('chips').style.display=tab==='day'?'flex':'none';
-$('chips').innerHTML=D.map(function(x,n){return '<button class="chip'+(n===cur?' on':'')+'" onclick="cur='+n+';render()"><b>'+(n+1)+'</b>'+x.d+'</button>'}).join('');
-n0=0;$('main').innerHTML={ov:ov,pp:pp,day:day,bg:bg,ln:ln}[tab]();
-$('nav').innerHTML=NAV.map(function(n){return '<button class="'+(n[0]===tab?'on':'')+'" onclick="tab=\''+n[0]+'\';render();window.scrollTo(0,0)"><i>'+n[1]+'</i>'+n[2]+'</button>'}).join('');upd()}
+function art(k){var p=PAL[k],g='g'+(++n0);return '<svg viewBox="0 0 300 90" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="'+g+'" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="'+p[0]+'"/><stop offset="1" stop-color="'+p[1]+'"/></linearGradient></defs><rect width="300" height="90" fill="url(#'+g+')"/>'+SC[k]()+'</svg>'}
+
+/* ---- 分頁與日期切換 ---- */
+function show(){
+  document.querySelectorAll('.tab').forEach(function(s){s.hidden=s.id!=='t-'+tab});
+  document.querySelectorAll('.day').forEach(function(s,n){s.hidden=n!==cur});
+  $('chips').style.display=tab==='day'?'flex':'none';
+  document.querySelectorAll('.chip').forEach(function(b,n){b.classList.toggle('on',n===cur)});
+  document.querySelectorAll('nav button').forEach(function(b){b.classList.toggle('on',b.dataset.t===tab)});
+}
+document.querySelectorAll('.chip').forEach(function(b,n){b.onclick=function(){cur=n;show()}});
+document.querySelectorAll('nav button').forEach(function(b){b.onclick=function(){tab=b.dataset.t;show();window.scrollTo(0,0)}});
+
+/* ---- 景點插畫、行李勾選 ---- */
+document.querySelectorAll('i[data-k]').forEach(function(e){var d=document.createElement('div');d.innerHTML=art(e.dataset.k);e.replaceWith(d.firstChild)});
+document.querySelectorAll('label.ck input').forEach(function(c){c.checked=ck(c.dataset.id);c.onchange=function(){sv(c.dataset.id,c.checked)}});
+
+/* ---- 頂部插畫 ---- */
 (function(){var o='<circle cx="335" cy="26" r="13" fill="#ffd66b"/>';[[40,18],[150,30],[250,14]].forEach(function(c){o+='<ellipse cx="'+c[0]+'" cy="'+c[1]+'" rx="26" ry="7" fill="#fff"/><ellipse cx="'+(c[0]+14)+'" cy="'+(c[1]-5)+'" rx="15" ry="7" fill="#fff"/>'});
 o+='<path d="M0 68H400" stroke="#4a6fa5" stroke-width="3"/><path d="M122 68V16M278 68V16M114 68L122 16L130 68M270 68L278 16L286 68" stroke="#4a6fa5" stroke-width="3" fill="none"/><path d="M0 66Q60 62 122 16Q200 74 278 16Q340 62 400 66" stroke="#4a6fa5" stroke-width="2" fill="none"/>';
 for(var j=0;j<40;j++)o+='<circle cx="'+(j*10+3)+'" cy="66" r="1.4" fill="#f2a93b"/>';
 o+='<rect y="70" width="400" height="26" fill="#a9d3ee"/>';for(var k=0;k<12;k++)o+='<path d="M'+(k*34+8)+' '+(76+k%3*6)+'h18" stroke="#fff" opacity=".7" stroke-width="2"/>';
 $('hv').innerHTML=o})();
-render();
+show();upd();
